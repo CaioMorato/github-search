@@ -11,7 +11,8 @@ function App() {
     <main>
       <Header />
       <SearchBar />
-      {userData ? DataCard : 'Digite um usuário'}
+      <DataCard />
+      {/* {userData ? DataCard : 'Digite um usuário'} */}
     </main>
   );
 }

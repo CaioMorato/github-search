@@ -1,8 +1,14 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import MyContext from '../context/MyContext';
 
 function SearchBar() {
+  const [inputText, setInputText] = useState('');
   const { setSearchText } = useContext(MyContext);
+
+  const handleClick = () => {
+    setSearchText(inputText);
+  };
+
   return (
     <div className="flex shadow-md rounded-xl mx-10 my-3">
       <div className="flex-1 lg:flex-none">
@@ -11,12 +17,12 @@ function SearchBar() {
             type="text"
             placeholder="Search Github username..."
             className="input"
-            onChange={({ target }) => setSearchText(target.value)}
+            onChange={({ target }) => setInputText(target.value)}
           />
         </div>
       </div>
       <div className="flex-none">
-        <button className="btn btn-square btn-ghost">
+        <button className="btn btn-square btn-ghost" onClick={() => handleClick()}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

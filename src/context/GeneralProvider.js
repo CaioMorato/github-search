@@ -16,7 +16,7 @@ function GeneralProvider({ children }) {
       console.log(request.data);
     };
     fetchAPI();
-  }, []);
+  }, [searchText]);
 
   const globalState = {
     darkTheme,
