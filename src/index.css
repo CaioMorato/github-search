@@ -6,6 +6,18 @@
 General Config
 ------------------------- */
 
+main {
+  height: 100vh;
+}
+
+.light-text-color {
+  color: #f9fafb;
+}
+
+.dark-text-color {
+  color: #1f2937;
+}
+
 /* -------------------------
 Header
 ------------------------- */

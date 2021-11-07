@@ -14,9 +14,9 @@ function cardRender(bool) {
 }
 
 function App() {
-  const { searchText } = useContext(MyContext);
+  const { searchText, darkTheme } = useContext(MyContext);
   return (
-    <main>
+    <main className={`${darkTheme ? 'bg-base-content' : 'bg-base-200'}`}>
       <Header />
       <SearchBar />
       {cardRender(searchText)}

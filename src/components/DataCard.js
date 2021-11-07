@@ -11,11 +11,15 @@ import { FaLink, FaTwitter } from 'react-icons/fa';
 import { BsBuilding } from 'react-icons/bs';
 
 function DataCard() {
-  const { userData } = useContext(MyContext);
+  const { userData, darkTheme } = useContext(MyContext);
 
   return (
-    <section className="rounded-xl shadow-md mx-5 my-3 flex flex-col px-7 py-6">
-      <div className="avatar-presentation flex items-center justify-around">
+    <section
+      className={`${
+        darkTheme ? 'light-text-color' : 'dark-text-color'
+      } rounded-xl shadow-md mx-5 my-3 flex flex-col px-7 py-6`}
+    >
+      <div className="avatar-presentation flex items-center justify-between">
         <div className="avatar h-max">
           <div className="mb-8 rounded-full w-24">
             <img src={userData.avatar_url} alt={`Foto do perfil do usuário ${userData.name}`} />

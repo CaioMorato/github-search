@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import MyContext from '../context/MyContext';
 
 function UserStats(data) {
-  const { userData } = useContext(MyContext);
+  const { userData, darkTheme } = useContext(MyContext);
   return (
     <div className="user-stats rounded-xl flex items-center justify-between my-5">
       <div>

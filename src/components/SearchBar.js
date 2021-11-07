@@ -3,7 +3,7 @@ import MyContext from '../context/MyContext';
 
 function SearchBar() {
   const [inputText, setInputText] = useState('');
-  const { setSearchText } = useContext(MyContext);
+  const { setSearchText, darkTheme } = useContext(MyContext);
 
   const handleClick = () => {
     setSearchText(inputText);
@@ -27,7 +27,9 @@ function SearchBar() {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            className="inline-block w-6 h-6 stroke-current"
+            className={`${
+              darkTheme ? 'text-base-200' : 'text-base-contet'
+            } inline-block w-6 h-6 stroke-current`}
           >
             <path
               strokeLinecap="round"
