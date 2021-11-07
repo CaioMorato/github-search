@@ -9,15 +9,23 @@ function SearchBar() {
     setSearchText(inputText);
   };
 
+  const handleKeyPress = (evt) => {
+    if (evt.code === 'Enter') {
+      handleClick();
+    }
+  };
+
   return (
     <div className="flex shadow-md rounded-xl mx-10 my-3">
-      <div className="flex-1 lg:flex-none">
+      <div className="flex-1">
         <div className="form-control">
           <input
             type="text"
             placeholder="Search Github username..."
             className="input"
             onChange={({ target }) => setInputText(target.value)}
+            onKeyPress={(evt) => handleKeyPress(evt)}
+            key
           />
         </div>
       </div>
