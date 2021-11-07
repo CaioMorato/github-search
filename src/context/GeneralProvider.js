@@ -6,7 +6,7 @@ import MyContext from './MyContext';
 
 function GeneralProvider({ children }) {
   const [darkTheme, setDarkTheme] = useState(false);
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState('lucianolanes');
   const [userData, setUserData] = useState(false);
 
   useEffect(() => {
