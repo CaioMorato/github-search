@@ -17,11 +17,16 @@ function Header() {
         </h1>
       </div>
       <div>
-        <input type="checkbox" class="checkbox" id="chk" onClick={() => setDarkTheme(!darkTheme)} />
-        <label class="label" for="chk">
-          <BsFillSunFill class="fas fa-moon"></BsFillSunFill>
-          <BsFillMoonFill class="fas fa-sun"></BsFillMoonFill>
-          <div class="ball"></div>
+        <input
+          type="checkbox"
+          className="checkbox"
+          id="chk"
+          onClick={() => setDarkTheme(!darkTheme)}
+        />
+        <label className="label" htmlFor="chk">
+          <BsFillSunFill className="fas fa-moon"></BsFillSunFill>
+          <BsFillMoonFill className="fas fa-sun"></BsFillMoonFill>
+          <div className="ball"></div>
         </label>
       </div>
     </header>
