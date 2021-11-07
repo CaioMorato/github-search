@@ -16,7 +16,7 @@ function DataCard() {
   return (
     <section className="rounded-xl shadow-md mx-5 my-3 flex flex-col px-7 py-6">
       <div className="avatar-presentation flex items-center justify-around">
-        <div class="avatar h-max">
+        <div className="avatar h-max">
           <div className="mb-8 rounded-full w-24">
             <img src={userData.avatar_url} alt={`Foto do perfil do usuário ${userData.name}`} />
           </div>
@@ -34,11 +34,11 @@ function DataCard() {
       <div className="bio-info">
         <div className="location-website">
           <div className="location flex my-2 items-center">
-            <MdLocationOn className="mr-2"/>
+            <MdLocationOn className="mr-2" />
             {userData.location}
           </div>
           <div className="website flex my-2 items-center">
-            <FaLink className="mr-2"/>
+            <FaLink className="mr-2" />
             {userData.blog}
           </div>
         </div>

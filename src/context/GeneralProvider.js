@@ -6,14 +6,13 @@ import MyContext from './MyContext';
 
 function GeneralProvider({ children }) {
   const [darkTheme, setDarkTheme] = useState(false);
-  const [searchText, setSearchText] = useState('lucianolanes');
+  const [searchText, setSearchText] = useState('');
   const [userData, setUserData] = useState(false);
 
   useEffect(() => {
     const fetchAPI = async () => {
       const request = await axios.get(`https://api.github.com/users/${searchText}`);
       setUserData(request.data);
-      console.log(request.data);
     };
     fetchAPI();
   }, [searchText]);

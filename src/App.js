@@ -1,18 +1,25 @@
 // components
-// import { useContext } from 'react';
+import { useContext } from 'react';
 import DataCard from './components/DataCard';
 import Header from './components/Header';
+import NoUser from './components/NoUser';
 import SearchBar from './components/SearchBar';
-// import MyContext from './context/MyContext';
+import MyContext from './context/MyContext';
+
+function cardRender(bool) {
+  if (bool) {
+    return <DataCard />;
+  }
+  return <NoUser />;
+}
 
 function App() {
-  // const { userData } = useContext(MyContext);
+  const { searchText } = useContext(MyContext);
   return (
     <main>
       <Header />
       <SearchBar />
-      <DataCard />
-      {/* {userData ? DataCard : 'Digite um usuário'} */}
+      {cardRender(searchText)}
     </main>
   );
 }
