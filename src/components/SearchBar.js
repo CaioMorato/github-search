@@ -3,7 +3,7 @@ import MyContext from '../context/MyContext';
 
 function SearchBar() {
   const [inputText, setInputText] = useState('');
-  const { setSearchText, darkTheme } = useContext(MyContext);
+  const { setSearchText } = useContext(MyContext);
 
   const handleClick = () => {
     setSearchText(inputText);
