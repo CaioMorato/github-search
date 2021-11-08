@@ -17,17 +17,17 @@ function DataCard() {
     <section
       className={`${
         darkTheme ? 'light-text-color' : 'dark-text-color'
-      } rounded-xl shadow-md mx-5 my-3 flex flex-col px-7 py-6`}
+      } rounded-xl shadow-md mx-5 my-3 flex flex-col px-4 py-6`}
     >
-      <div className="avatar-presentation flex items-center justify-between md:justify-around">
+      <div className="avatar-presentation flex items-start justify-between md:justify-around">
         <div className="avatar h-max md:max-w-xl">
           <div className="mb-8 rounded-full w-24 md:w-40">
             <img src={userData.avatar_url} alt={`Foto do perfil do usuário ${userData.name}`} />
           </div>
         </div>
-        <div className="presentation flex flex-col md:flex-row md:justify-between">
+        <div className="presentation flex flex-col md:flex-row md:justify-between md:w-8/12 w-7/12">
           <div className="flex flex-col">
-            <h2 className="font-bold text-2xl md:text-4xl">{userData.name}</h2>
+            <h2 className="font-bold text-xl md:text-4xl">{userData.name}</h2>
             <a
               className="link md:text-xl"
               href={`https://github.com/${userData.login}`}
@@ -40,11 +40,11 @@ function DataCard() {
           <h3>{convertDate(userData.created_at)}</h3>
         </div>
       </div>
-      <div className="bio">
+      <div className="bio md:mx-10">
         <p>{userData.bio ? userData.bio : 'Bio not available for this profile'}</p>
       </div>
       <UserStats />
-      <div className="bio-info">
+      <div className="bio-info md:mx-10 md:flex md: justify-between">
         <div className="location-website">
           <div className="location flex my-2 items-center">
             <MdLocationOn className="mr-2" />

@@ -4,7 +4,7 @@ import MyContext from '../context/MyContext';
 function UserStats(data) {
   const { userData } = useContext(MyContext);
   return (
-    <div className="user-stats rounded-xl flex items-center justify-between shadow-lg p-4 my-5">
+    <div className="user-stats rounded-xl flex items-center justify-between shadow-lg p-4 my-5 md:mx-10">
       <div>
         <h3>Repos</h3>
         <p className="text-center font-bold">{userData.public_repos}</p>
