@@ -25,7 +25,6 @@ function SearchBar() {
             className="input"
             onChange={({ target }) => setInputText(target.value)}
             onKeyPress={(evt) => handleKeyPress(evt)}
-            key
           />
         </div>
       </div>
