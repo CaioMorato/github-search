@@ -20,6 +20,7 @@ function Header() {
         <input
           type="checkbox"
           className="checkbox"
+          checked={darkTheme}
           id="chk"
           onClick={() => setDarkTheme(!darkTheme)}
         />
