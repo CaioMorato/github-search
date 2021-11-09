@@ -1,20 +1,17 @@
+// vitals
 import { useContext } from 'react';
 import MyContext from '../context/MyContext';
+// components
+import { themeToggleText, themeToggleBackground } from '../helpers/themeToggle';
 // styles
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
 
 function Header() {
   const { darkTheme, setDarkTheme } = useContext(MyContext);
   return (
-    <header
-      className={`${
-        darkTheme ? 'bg-base-content' : 'bg-base-200'
-      } flex justify-between align-center p-5`}
-    >
+    <header className={`${themeToggleBackground(darkTheme)} flex justify-between align-center p-5`}>
       <div>
-        <h1 className={`${darkTheme ? 'text-base-200' : 'text-base-contet'} logo font-bold`}>
-          Github Search
-        </h1>
+        <h1 className={`${themeToggleText(darkTheme)} logo font-bold`}>Github Search</h1>
       </div>
       <div>
         <input

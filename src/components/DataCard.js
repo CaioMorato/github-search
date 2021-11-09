@@ -5,6 +5,7 @@ import MyContext from '../context/MyContext';
 // components
 import convertDate from '../helpers/convertDate';
 import UserStats from './UserStats';
+import { themeToggleText } from '../helpers/themeToggle';
 //styles
 import { MdLocationOn } from 'react-icons/md';
 import { FaLink, FaTwitter } from 'react-icons/fa';
@@ -15,9 +16,9 @@ function DataCard() {
 
   return (
     <section
-      className={`${
-        darkTheme ? 'light-text-color' : 'dark-text-color'
-      } rounded-xl shadow-md mx-5 my-3 flex flex-col px-4 py-6`}
+      className={`${themeToggleText(
+        darkTheme
+      )} rounded-xl shadow-md mx-5 my-3 flex flex-col px-4 py-6`}
     >
       <div className="avatar-presentation flex items-start justify-between md:justify-around">
         <div className="avatar h-max md:max-w-xl">

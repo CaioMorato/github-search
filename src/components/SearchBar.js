@@ -1,5 +1,8 @@
+// vitals
 import { useContext, useState } from 'react';
 import MyContext from '../context/MyContext';
+// components
+import { themeToggleText } from '../helpers/themeToggle';
 
 function SearchBar() {
   const [inputText, setInputText] = useState('');
@@ -34,9 +37,7 @@ function SearchBar() {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            className={`${
-              darkTheme ? 'text-base-200' : 'text-base-contet'
-            } inline-block w-6 h-6 stroke-current`}
+            className={`${themeToggleText(darkTheme)} inline-block w-6 h-6 stroke-current`}
           >
             <path
               strokeLinecap="round"
